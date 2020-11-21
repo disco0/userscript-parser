@@ -17,6 +17,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/amio/userscript-parser.git"
   },
+  "types": "./types/index.d.ts",
   "keywords": [
     "userscript",
     "parser",

@@ -14,6 +14,8 @@
         "rootDir": "./src",
         "outDir": "./",
         "module": "CommonJS",
-        "moduleResolution": "Node"
+        "moduleResolution": "Node",
+        "declaration": true,
+        "declarationDir": "./types"
     }
 }
