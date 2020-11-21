@@ -1,0 +1,19 @@
+{
+    "extends": "@tsconfig/node12/tsconfig.json",
+    "files": 
+    [ 
+        "src/index.ts",
+        "src/test/parser.spec.ts",
+        "src/test/parse.ts",
+    ],
+    "compilerOptions": 
+    {
+        "listEmittedFiles": true,
+        "pretty": true,
+        "typeRoots": ["./node_modules/@types"],
+        "rootDir": "./src",
+        "outDir": "./",
+        "module": "CommonJS",
+        "moduleResolution": "Node"
+    }
+}
