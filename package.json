@@ -9,7 +9,9 @@
     "postversion": "git push; git push --tags; npm publish",
     "patch": "npm version patch -m 'v%s'",
     "minor": "npm version minor -m 'v%s'",
-    "major": "npm version major -m 'v%s'"
+    "major": "npm version major -m 'v%s'",
+    "compile": "tsc --project ./tsconfig.json ",
+    "watch": "tsc --watch --project ./tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -27,7 +29,12 @@
   },
   "homepage": "https://github.com/amio/userscript-parser#readme",
   "devDependencies": {
+    "@tsconfig/node12": "^1.0.7",
+    "@types/tape": "^4.13.0",
     "faucet": "0.0.1",
-    "tape": "^4.1.0"
+    "tape": "^5.0.1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0"
   }
 }
