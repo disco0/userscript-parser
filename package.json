@@ -1,25 +1,35 @@
 {
   "name": "userscript-parser",
-  "version": "2.2.2",
+  "version": "3.0.0",
   "description": "Userscript metadata parser extended from original userscript-parser npm package.",
-  "main": "index.js",
+  "main": "./index.js",
   "typings": "./types/index.d.ts",
-  "exports":
-  {
-      "./": "./index.js",
-      ".": "./index.js",
-      "./UserscriptMeta": "./lib/UserscriptMeta.js"
+  "exports": {
+    "./": "./index.js",
+    ".": "./index.js",
+    "./UserscriptMeta": "./lib/UserscriptMeta.js"
   },
   "scripts": {
-    "compile": "tsc --project ./tsconfig.json ",
-    "compile:watch": "tsc --watch --project ./tsconfig.json",
-    "compile:tests:watch": "tsc --watch --project src/test/tsconfig.json",
+    "clean": "rimraf types lib test ./index.js ./UserscriptMeta.js && rimraf --glob 'src/**/*.js' './**/*.tsbuildinfo' ",
+    "compile": "yarn compile:all",
+    "compile:watch": "yarn compile --watch",
+    "compile:all": "yarn build",
+    "compile:all:watch": "yarn compile:all --watch",
+    "watch:all": "yarn compile:all:watch",
+    "compile:tests:": "tsc --build src/test/tsconfig.json",
+    "compile:tests:watch": "yarn compile:tests --watch",
+    "compile:lib": "tsc --build ./src/tsconfig.json",
+    "compile:lib:watch": "yarn compile:lib --watch",
+    "build": "tsc --build ./tsconfig.build.json",
+    "build:clean": "yarn clean && yarn build",
+    "build:clean:watch": "yarn build:clean --watch",
     "test": "tape test/*.spec.js | faucet",
     "preversion": "npm run test",
     "postversion": "git push; git push --tags; npm publish",
     "patch": "npm version patch -m 'v%s'",
     "minor": "npm version minor -m 'v%s'",
-    "major": "npm version major -m 'v%s'"
+    "major": "npm version major -m 'v%s'",
+    "deps:global": "npm install --global rimraf typescript@next"
   },
   "repository": {
     "type": "git",
