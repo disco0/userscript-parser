@@ -5,16 +5,11 @@
   "main": "./index.js",
   "typings": "./types/index.d.ts",
   "files": [
-      "types",
-      "index.js",
-      "UserscriptMeta.js",
-      "lib"
+    "types/**",
+    "index.js",
+    "UserscriptMeta.js",
+    "lib/**"
   ],
-  "exports": {
-    "./": "./index.js",
-    ".": "./index.js",
-    "./UserscriptMeta": "./lib/UserscriptMeta.js"
-  },
   "scripts": {
     "clean": "rimraf types lib test ./index.js ./UserscriptMeta.js && rimraf --glob 'src/**/*.js' './**/*.tsbuildinfo' ",
     "compile": "yarn compile:all",

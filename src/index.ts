@@ -1,3 +1,4 @@
-import ParseUserscript from './lib/ParseUserscript'
+import ParseUserscript from './lib/ParseUserscript';
+export { UserscriptMeta } from './UserscriptMeta'
 
-export = ParseUserscript;
+export default ParseUserscript;
