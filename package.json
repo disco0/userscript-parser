@@ -4,6 +4,12 @@
   "description": "Userscript metadata parser extended from original userscript-parser npm package.",
   "main": "./index.js",
   "typings": "./types/index.d.ts",
+  "files": [
+      "types",
+      "index.js",
+      "UserscriptMeta.js",
+      "lib"
+  ],
   "exports": {
     "./": "./index.js",
     ".": "./index.js",
