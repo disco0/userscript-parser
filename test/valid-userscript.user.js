@@ -1,3 +1,4 @@
+"use strict";
 // ==UserScript==
 // @name        Awesome Script
 // @description This script even does the laundry!
@@ -12,8 +13,8 @@
 // @grant       GM_xmlhttpRequest
 // @grant       GM_getValue
 // @grant       GM_setValue
+// @noframes
 // @run-at      document-end
 // @license     MIT License
 // ==/UserScript==
-
-var whoami = "USERSCRIPT"
+var whoami = "USERSCRIPT";

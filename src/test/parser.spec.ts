@@ -46,6 +46,7 @@ function (test)
 // @grant       GM_xmlhttpRequest
 // @grant       GM_getValue
 // @grant       GM_setValue
+// @noframes
 // @run-at      document-end
 // @license     MIT License
 // ==/UserScript==`);
@@ -54,7 +55,7 @@ function (test)
 });
 
 tape('parse an invalid userscript -> null', 
-function (t) 
+function (t)  
 {
     t.equal(usp(''), defaultReturnValue)
     t.end()

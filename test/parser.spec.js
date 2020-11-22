@@ -43,6 +43,7 @@ tape('parse a valid userscript -> { meta, metablock, content }', function (test)
 // @grant       GM_xmlhttpRequest
 // @grant       GM_getValue
 // @grant       GM_setValue
+// @noframes
 // @run-at      document-end
 // @license     MIT License
 // ==/UserScript==`);
