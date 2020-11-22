@@ -5,18 +5,22 @@
             "type": "npm",
             "script": "test",
             "group": "test",
-            "problemMatcher": [],
             "label": "test",
             "detail": "tape test/*.spec.js | faucet",
             "presentation": {
-                "echo": true,
-                "reveal": "always",
-                "focus": false,
-                "panel": "shared",
+                "clear":            false,
+                "echo":             true,
+                "focus":            false,
+                "group":            "test",
+                "panel":            "dedicated",
+                "reveal":           "always",
+                "revealProblems":   "onProblem",
                 "showReuseMessage": false,
-                "clear": false,
-                "group": "test",
-                "revealProblems": "onProblem"
+            },
+            "runOptions": 
+            {
+                "instanceLimit": 1,
+                "reevaluateOnRerun": true
             },
             "options": 
             {
@@ -25,12 +29,11 @@
                     "label": "Test",
                     "hide": false
                 }
-            },
-            "dependsOn": "watch"
+            }
         },
         {
             "type": "npm",
-            "script": "watch",
+            "script": "compile:watch",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -38,12 +41,28 @@
             "problemMatcher": [ "$tsc-watch" ],
             "label": "watch",
             "detail": "tsc Watch",
+            "presentation": {
+                "clear":            false,
+                "echo":             true,
+                "focus":            false,
+                "group":            "build",
+                "panel":            "shared",
+                "reveal":           "always",
+                "revealProblems":   "onProblem",
+                "showReuseMessage": false
+            },
+            "runOptions": 
+            {
+                "instanceLimit": 1,
+                "reevaluateOnRerun": true,
+                "runOn": "folderOpen"
+            },
             "options": 
             {
                 "statusbar":
                 {
                     "label": "Watch",
-                    "hide": false
+                    "hide":  false
                 }
             }
         }

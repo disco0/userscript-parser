@@ -1,21 +1,21 @@
 {
   "name": "userscript-parser",
   "version": "2.2.2",
-  "description": "Userscript metadata parser.",
-  "main": "index.js",
+  "description": "Userscript metadata parser extended from original userscript-parser npm package.",
+  "main": "dist/index.js",
   "scripts": {
+    "compile": "tsc --project ./tsconfig.json ",
+    "compile:watch": "tsc --watch --project ./tsconfig.json",
     "test": "tape test/*.spec.js | faucet",
     "preversion": "npm run test",
     "postversion": "git push; git push --tags; npm publish",
     "patch": "npm version patch -m 'v%s'",
     "minor": "npm version minor -m 'v%s'",
-    "major": "npm version major -m 'v%s'",
-    "compile": "tsc --project ./tsconfig.json ",
-    "watch": "tsc --watch --project ./tsconfig.json"
+    "major": "npm version major -m 'v%s'"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/amio/userscript-parser.git"
+    "url": "git+ssh://git@github.com/disco0/userscript-parser.git"
   },
   "types": "./types/index.d.ts",
   "keywords": [
@@ -23,19 +23,22 @@
     "parser",
     "meta"
   ],
-  "author": "Amio <amio.cn@gmail.com>",
+  "author": "disk0",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/amio/userscript-parser/issues"
+    "url": "https://github.com/disco0/userscript-parser/issues"
   },
-  "homepage": "https://github.com/amio/userscript-parser#readme",
+  "homepage": "https://github.com/disco0/userscript-parser#readme",
   "devDependencies": {
+    "@types/debug": "^4.1.5",
     "@tsconfig/node12": "^1.0.7",
     "@types/tape": "^4.13.0",
     "faucet": "0.0.1",
     "tape": "^5.0.1"
   },
   "dependencies": {
-    "chalk": "^4.1.0"
+    "chalk": "^4.1.0",
+    "debug": "^4.3.1"
   }
+
 }
