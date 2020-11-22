@@ -1,0 +1,10 @@
+// Base tsconfig - for use with --build flag
+{
+    "files":   [],
+    "include": [],
+    "references": 
+    [
+        { "path": "./src/tsconfig.json"      },
+        { "path": "./src/test/tsconfig.json" }
+    ]
+}

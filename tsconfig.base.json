@@ -1,0 +1,32 @@
+{
+    "extends": "@tsconfig/node12/tsconfig.json",
+    "exclude": 
+    [
+        "./types/**/*"
+    ],
+    "compilerOptions": 
+    {
+        "composite": true,
+
+        "typeRoots": ["./node_modules/@types"],
+        "moduleResolution": "Node",
+
+        "declaration": true,
+        "declarationDir": "./types",
+
+        "listEmittedFiles": true,
+        "pretty": true,
+        "preserveWatchOutput": true,
+
+        //#region @tsconfig/node12
+        "lib": ["es2019", "es2020.promise", "es2020.bigint", "es2020.string"],
+        "module": "commonjs",
+        "target": "es2019",
+
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+        //#endregion @tsconfig/node12
+    }
+}

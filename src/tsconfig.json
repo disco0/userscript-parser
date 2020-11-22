@@ -1,0 +1,25 @@
+{
+    // "extends": "@tsconfig/node12/tsconfig.json",
+    "extends": "../tsconfig.base.json",
+    "include": 
+    [
+        "./globals.d.ts",
+        "./*.ts",
+        "./lib/**/*.ts"
+    ],
+    "exclude": 
+    [
+        "./test/**/*"
+    ],
+    "compilerOptions": {
+        "rootDir": "./",
+        "baseUrl": "./",
+        "outDir": "../",
+
+        "tsBuildInfoFile": "./tsconfig.lib.tsbuildinfo",
+        
+        "composite": true,
+        "declaration": true,
+        "declarationDir": "../types",
+    }
+}
