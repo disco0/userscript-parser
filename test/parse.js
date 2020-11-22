@@ -16,7 +16,7 @@ const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const chalk_1 = __importDefault(require("chalk"));
 const __1 = __importDefault(require("../"));
-const UserscriptMetaClass_1 = require("../lib/UserscriptMetaClass");
+const UserscriptMeta_1 = require("../lib/UserscriptMeta");
 //#endregion Imports
 //#region Logging
 const { log: $log, error } = console;
@@ -41,7 +41,7 @@ log.object(parsed, "Function");
 results.function = parsed;
 //#endregion Main Function
 //#region Class
-const instance = new UserscriptMetaClass_1.UserscriptMeta(script);
+const instance = new UserscriptMeta_1.UserscriptMeta(script);
 log.object(instance, "Class");
 results.class = instance;
 module.exports = results;

@@ -17,8 +17,8 @@ import path from 'path'
 
 import c from 'chalk'
 
-import parseUserscriptMeta from '../'
-import { UserscriptMeta } from '../lib/UserscriptMetaClass';
+import ParseUserscript from '../'
+import { UserscriptMeta } from '../lib/UserscriptMeta';
 
 //#endregion Imports
 
@@ -52,7 +52,7 @@ const results: Record<string, any> =
 
 //#region Main Function
 
-const parsed = parseUserscriptMeta(script)
+const parsed = ParseUserscript(script)
 log.object(parsed, "Function");
 results.function = parsed;
 

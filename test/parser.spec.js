@@ -47,7 +47,7 @@ tape('parse a valid userscript -> { meta, metablock, content }', function (test)
 // @run-at      document-end
 // @license     MIT License
 // ==/UserScript==`);
-    test.equal(result === null || result === void 0 ? void 0 : result.content.trim(), 'var whoami = "USERSCRIPT"');
+    test.equal(result === null || result === void 0 ? void 0 : result.content.trim(), 'var whoami = "USERSCRIPT";');
     test.end();
 });
 tape('parse an invalid userscript -> null', function (t) {

@@ -50,7 +50,7 @@ function (test)
 // @run-at      document-end
 // @license     MIT License
 // ==/UserScript==`);
-    test.equal(result?.content.trim(), 'var whoami = "USERSCRIPT"')
+    test.equal(result?.content.trim(), 'var whoami = "USERSCRIPT";')
     test.end()
 });
 

@@ -1,4 +1,4 @@
-import { UserscriptMeta } from './UserscriptMetaClass';
+import { UserscriptMeta } from './UserscriptMeta';
 import { DefaultReturn } from './parseUserscriptMeta';
 declare function ParseUserscript(userscript: string): UserscriptMeta | DefaultReturn;
 declare namespace ParseUserscript {

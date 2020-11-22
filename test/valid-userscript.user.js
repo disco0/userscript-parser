@@ -1,4 +1,3 @@
-"use strict";
 // ==UserScript==
 // @name        Awesome Script
 // @description This script even does the laundry!

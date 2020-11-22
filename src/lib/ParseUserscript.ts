@@ -2,7 +2,7 @@
 
 import debug from './debug'
 
-import { UserscriptMeta } from './UserscriptMetaClass';
+import { UserscriptMeta } from './UserscriptMeta';
 import { DefaultReturnValue, DefaultReturn} from './parseUserscriptMeta';
 
 function ParseUserscript(userscript: string): UserscriptMeta | DefaultReturn
