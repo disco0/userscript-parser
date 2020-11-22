@@ -2,10 +2,18 @@
   "name": "userscript-parser",
   "version": "2.2.2",
   "description": "Userscript metadata parser extended from original userscript-parser npm package.",
-  "main": "dist/index.js",
+  "main": "index.js",
+  "typings": "./types/index.d.ts",
+  "exports":
+  {
+      "./": "./index.js",
+      ".": "./index.js",
+      "./UserscriptMeta": "./lib/UserscriptMeta.js"
+  },
   "scripts": {
     "compile": "tsc --project ./tsconfig.json ",
     "compile:watch": "tsc --watch --project ./tsconfig.json",
+    "compile:tests:watch": "tsc --watch --project src/test/tsconfig.json",
     "test": "tape test/*.spec.js | faucet",
     "preversion": "npm run test",
     "postversion": "git push; git push --tags; npm publish",
@@ -17,7 +25,6 @@
     "type": "git",
     "url": "git+ssh://git@github.com/disco0/userscript-parser.git"
   },
-  "types": "./types/index.d.ts",
   "keywords": [
     "userscript",
     "parser",
@@ -40,5 +47,4 @@
     "chalk": "^4.1.0",
     "debug": "^4.3.1"
   }
-
 }
